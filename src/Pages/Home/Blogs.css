@@ -26,3 +26,23 @@
     margin-right: 20px;
     font-weight: bold;
 }
+
+.verMas {
+    font-weight: bold;
+    color: blue;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.verMas:hover {
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 10px;
+    margin: 20px;
+    transition: background-color 1s;
+    transition: color 0.5s;
+
+}

@@ -1,0 +1,28 @@
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 20px;
+    object-fit: cover;
+}
+
+.subtitle {
+    display: flex;
+}
+
+.author {
+    padding-left: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+}

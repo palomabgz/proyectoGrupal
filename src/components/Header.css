@@ -33,3 +33,7 @@
 .links-end a:hover {
     background-color: #575757;
 }
+
+.icon {
+    margin-right: 5px;
+}

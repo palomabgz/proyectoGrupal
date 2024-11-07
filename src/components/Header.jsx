@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { AuthContext } from "../context/AuthContext"
 import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHouse } from "@fortawesome/free-solid-svg-icons"
 import "./Header.css"
 const Header = () => {
     const {isLogged, setIsLogged} = useContext(AuthContext)
@@ -25,6 +27,7 @@ const Header = () => {
                 {isLogged && <a onClick={() => setIsLogged(false)}>Cerrar Sesión</a>}
                 {!isLogged && linksLogout.map((link) => (
                     <Link key={link.to} to={link.to}>
+                        <FontAwesomeIcon icon={faHouse} className="icon"></FontAwesomeIcon>
                         {link.text}
                     </Link>
                 ))}

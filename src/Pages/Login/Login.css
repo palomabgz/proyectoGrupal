@@ -1,0 +1,28 @@
+.contenedorLogin {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    width: 20%;
+    height: 30%;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.boton {
+    margin-top: 20px;
+}
+
+.label {
+    text-align: start;
+}

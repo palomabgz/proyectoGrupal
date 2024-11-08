@@ -1,14 +1,15 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home/Home.jsx'
+import Home from './pages/home/Home.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
-import DetalleBlog from './pages/Home/DetalleBlog.jsx'
+import DetalleBlog from './pages/home/DetalleBlog.jsx'
 import AuthProvider from './context/AuthContext.jsx'
-import Login from './pages/Login/Login.jsx'
-import Register from './pages/Register/Register.jsx'
-import CrearBlog from './pages/Crear-Blog/CrearBlog.jsx'
-import MisBlogs from './pages/Mis-Blogs/MisBlogs.jsx'
+import Login from './pages/login/Login.jsx'
+import Register from './pages/register/Register.jsx'
+import CrearBlog from './pages/crear-blog/CrearBlog.jsx'
+import MisBlogs from './pages/mis-blogs/MisBlogs.jsx'
+import ModificarBlog from './pages/modificar-blog/ModificarBlog.jsx'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
             <Route path="/" element={<Home />} /> 
             <Route path="/blogs/:id" element={<DetalleBlog />} />
             <Route path='/crear-blog' element={<CrearBlog/>}/>
-            <Route path='/modificar-blog/:idblog' element={<></>}/>
+            <Route path='/modificar-blog/:idblog' element={<ModificarBlog/>}/>
             <Route path='/mis-blogs/' element={<MisBlogs/>}/>
             <Route path='/login' element={<Login />}/>
             <Route path='/register' element={<Register/>}/>

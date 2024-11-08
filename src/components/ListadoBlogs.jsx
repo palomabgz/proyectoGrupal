@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { newsMock } from "../mocks/newsMock";
-import Blog from "../pages/Home/Blogs";
+import Blog from "../pages/home/Blogs";
 import BlogAdmin from "../pages/mis-blogs/BlogAdmin";
 const ListadoBlogs = ({ isLogged=false }) => {
     const [blogs, setBlogs] = useState(newsMock);

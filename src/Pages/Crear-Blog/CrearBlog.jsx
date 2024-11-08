@@ -14,23 +14,47 @@ const CrearBlog = () => {
             content: content,
             UrlToImage: images,
             publisheAt: new Date(),
-            // author: "user1"
+            author: "user1"
         }
+        console.log(blog)
     }
 
     return (
-        <div>
-            <h1>Crear Blog</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="title">Títutlo</label>
-                <input type="text" id="title" onChange={(e) => setTitle(e.target.value)}/>
-                <label htmlFor="description">Descripción</label>
-                <input type="text" id="description" onChange={(e) => setDescription(e.target.value)}/>
-                <label htmlFor="content">Contenido</label>
-                <textarea name="" id="content" cols="30" rows="10" onChange={(e) => setContent(e.target.value)}></textarea>
-                <label htmlFor="images">Imágenes</label>
-                <input type="file" id="images" onChange={(e) => setImages(e.target.value)}/>
-                <button type="submit">Crear Blog</button>
+        <div className="contenedor">
+            <form onSubmit={handleSubmit} className="form">
+            <h3>Crear Blog</h3>
+                <div className="input">
+                    <label htmlFor="title" className="label">Títutlo</label>
+                    <input 
+                    type="text" 
+                    id="title" 
+                    onChange={(e) => setTitle(e.target.value)}/>
+                </div>
+                <div className="input">
+                    <label htmlFor="description" className="label">Descripción</label>
+                    <input 
+                    type="text" 
+                    id="description" 
+                    onChange={(e) => setDescription(e.target.value)}/>
+                </div>
+                <div className="input">
+                    <label htmlFor="content" className="label">Contenido</label>
+                    <textarea 
+                    name="" 
+                    id="content" 
+                    onChange={(e) => setContent(e.target.value)}
+                    cols={"50"} 
+                    rows={"10"}>
+                    </textarea>
+                </div>
+                <div className="input">
+                    <label htmlFor="images" className="label">Imágenes</label>
+                    <input 
+                    type="text" 
+                    id="images" 
+                    onChange={(e) => setImages(e.target.value)}/>
+                </div>
+                <button type="submit" className="boton">Crear Blog</button>
             </form>
         </div>
     )

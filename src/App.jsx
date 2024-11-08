@@ -8,6 +8,7 @@ import AuthProvider from './context/AuthContext.jsx'
 import Login from './pages/Login/Login.jsx'
 import Register from './pages/Register/Register.jsx'
 import CrearBlog from './pages/Crear-Blog/CrearBlog.jsx'
+import MisBlogs from './pages/Mis-Blogs/MisBlogs.jsx'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
             <Route path="/blogs/:id" element={<DetalleBlog />} />
             <Route path='/crear-blog' element={<CrearBlog/>}/>
             <Route path='/modificar-blog/:idblog' element={<></>}/>
-            <Route path='/mis-blogs/' element={<></>}/>
+            <Route path='/mis-blogs/' element={<MisBlogs/>}/>
             <Route path='/login' element={<Login />}/>
             <Route path='/register' element={<Register/>}/>
           </Routes>

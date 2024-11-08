@@ -1,4 +1,4 @@
-import ListadoBlogs from "./ListadoBlogs";
+import ListadoBlogs from "../../components/ListadoBlogs"
 
 const Home = () => {
 

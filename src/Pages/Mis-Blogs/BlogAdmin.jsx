@@ -1,7 +1,11 @@
-import "./Blogs.css"
+import "./../Home/Blogs.css"
 import { Link } from "react-router-dom"
-const Blog = ({ blog }) => {
-    console.log(blog)
+const BlogAdmin = ({ blog, handleDelete }) => {
+
+    const eliminarBlog = () => {
+        handleDelete(blog.source.id)
+    }
+
     return (
         <div className="contenedor-card">
             <img src={blog.urlToImage} alt={blog.title} className="image"/>
@@ -12,10 +16,13 @@ const Blog = ({ blog }) => {
                     <p>{new Date(blog.publishedAt).toLocaleString("es")}</p>
                 </div>
                 <p className="description">{blog.description}</p>
-                <Link to={`/blogs/${blog.source.id}`} className="verMas">Ver más</Link>
+                <Link to={`/modificar-blog/${blog.source.id}`}>
+                    <button>Modificar</button>
+                </Link>
+                <button onClick={() => eliminarBlog()}>Eliminar</button>
             </div>
         </div>
     )
 }
 
-export default Blog
+export default BlogAdmin

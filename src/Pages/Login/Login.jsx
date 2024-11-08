@@ -22,7 +22,7 @@ const Login = () => {
     }
 
     return (
-        <div className="contenedorLogin">
+        <div className="contenedor">
             <form className="form">
                 <h3>Iniciar Sesión</h3>
                 <div className="input">

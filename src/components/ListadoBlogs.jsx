@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { newsMock } from "../mocks/newsMock";
 import Blog from "../pages/Home/Blogs";
-import BlogAdmin from "../pages/Mis-Blogs/BlogAdmin";
+import BlogAdmin from "../pages/mis-blogs/BlogAdmin";
 const ListadoBlogs = ({ isLogged=false }) => {
     const [blogs, setBlogs] = useState(newsMock);
     let blogsFilter = blogs

@@ -2,6 +2,7 @@ import { newsMock } from '../../mocks/newsMock'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const ModificarBlog = () => {
     const { idblog } = useParams();
     const [blog, setBlog] = useState(
@@ -26,6 +27,7 @@ const ModificarBlog = () => {
         }
         console.log(blog)
 
+        toast.success("Blog modificado")
         navigate("/mis-blogs");
     }
 

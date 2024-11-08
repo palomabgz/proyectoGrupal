@@ -1,23 +1,24 @@
 import { useState, useContext } from "react"
 import { AuthContext } from "../../context/AuthContext"
 import { useNavigate } from "react-router-dom"
+import { toast } from "react-toastify"
 import "./Login.css"
 
 const Login = () => {
 
     const {setIsLogged} = useContext(AuthContext)
-    const [usuario, setUsuario] = useState("")
-    const [contraseña, setContraseña] = useState("")
+    const [user, setUser] = useState("")
+    const [password, setPassword] = useState("")
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
-        e.peventDefault();
-
-        if(usuario.length > 0 && contraseña.length > 0){
+        e.preventDefault();
+        if(user.length > 0 && password.length > 0){
+            toast.success("Sesión iniciada")
             setIsLogged(true)
             navigate("/")
         } else {
-            alert("Por favor, rellene todos los campos")
+            toast.error("Por favor, rellene todos los campos")
         }
     }
 
@@ -26,20 +27,20 @@ const Login = () => {
             <form className="form">
                 <h3>Iniciar Sesión</h3>
                 <div className="input">
-                    <label htmlFor="usuario" className="label">Usuario</label>
+                    <label htmlFor="user" className="label">Usuario</label>
                     <input 
                     type="text" 
-                    id="usuario"
+                    id="user"
                     placeholder="Usuario"
-                    onChange={(e) => setUsuario(e.target.value)}/>
+                    onChange={(e) => setUser(e.target.value)}/>
                 </div>
                 <div className="input">
-                    <label htmlFor="contraseña" className="label">Contraseña</label>
+                    <label htmlFor="password" className="label">Contraseña</label>
                     <input 
                     type="password" 
-                    id="contraseña"
+                    id="password"
                     placeholder="contraseña" 
-                    onChange={(e) => setContraseña(e.target.value)} />
+                    onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <button className="boton" onClick={(e) => handleSubmit(e)}>Iniciar Sesión</button>
             </form>
@@ -48,3 +49,4 @@ const Login = () => {
 }
 
 export default Login
+

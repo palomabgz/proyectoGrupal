@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
+
 const CrearBlog = () => {
 
     const [title, setTitle] = useState("")
@@ -17,6 +19,7 @@ const CrearBlog = () => {
             author: "user1"
         }
         console.log(blog)
+        toast.success("Blog creado")
     }
 
     return (
